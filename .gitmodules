@@ -1,0 +1,3 @@
+[submodule "cloudfunctionslab"]
+	path = cloudfunctionslab
+	url = https://github.com/windevkay/cloudfunctions
