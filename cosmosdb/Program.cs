@@ -3,10 +3,10 @@
 public class Program
 {
     // Replace <documentEndpoint> with the information created earlier
-    private static readonly string EndpointUri = "https://windevkaycosmosdb-canadacentral.documents.azure.com:443/";
+    private static readonly string EndpointUri = "";
 
     // Set variable to the Primary Key from earlier.
-    private static readonly string PrimaryKey = "joYon5zPKdjWBuSkZbSiTTw9NYsC7Os4UOJcQxMipXidgAIeHBVl4KIm2mk3uktAFxSlv1f2jXIlACDb2NIXYg==";
+    private static readonly string PrimaryKey = "";
 
     // The Cosmos client instance
     private CosmosClient cosmosClient;
