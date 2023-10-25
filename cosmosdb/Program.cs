@@ -9,13 +9,13 @@ public class Program
     private static readonly string PrimaryKey = "";
 
     // The Cosmos client instance
-    private CosmosClient cosmosClient;
+    private CosmosClient? cosmosClient;
 
     // The database we will create
-    private Database database;
+    private Database? database;
 
     // The container we will create.
-    private Container container;
+    private Container? container;
 
     // The names of the database and container we will create
     private string databaseId = "az204Database";
@@ -61,14 +61,14 @@ public class Program
     private async Task CreateDatabaseAsync()
     {
         // Create a new database using the cosmosClient
-        this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(databaseId);
+        this.database = await this.cosmosClient!.CreateDatabaseIfNotExistsAsync(databaseId);
         Console.WriteLine("Created Database: {0}\n", this.database.Id);
     }
 
     private async Task CreateContainerAsync()
     {
         // Create a new container
-        this.container = await this.database.CreateContainerIfNotExistsAsync(containerId, "/LastName");
+        this.container = await this.database!.CreateContainerIfNotExistsAsync(containerId, "/LastName");
         Console.WriteLine("Created Container: {0}\n", this.container.Id);
     }
 }
